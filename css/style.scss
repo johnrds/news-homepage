@@ -1,0 +1,94 @@
+@import 'cssReset';
+@import 'variables';
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./../assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format('ttf');
+}
+
+a {
+    color: $clr-dark-grayish-blue;
+    text-decoration: none;
+    &:hover {
+        color: $clr-red;
+    }
+}
+
+body {
+    padding: $size-500;
+    font-family: 'Inter', Tahoma, sans-serif;
+    font-size: $fs-100;
+    font-weight: $fw-standard;
+    color: $clr-dark-grayish-blue;
+    background-color: $clr-white;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 4px 1px $clr-dark-grayish-blue;
+    background-color: $clr-red;
+    color: $clr-white;
+    padding: $size-100 $size-300;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    letter-spacing: $size-50;
+
+    &:hover {
+        background-color: $clr-dark-blue;
+    }
+}
+
+.aside {
+    background-color: $clr-dark-blue;
+    padding: $size-200;
+
+    .aside-new {
+        padding-block: $size-200;
+        border-bottom: 1px solid $clr-dark-grayish-blue;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .aside-new-title {
+        cursor: pointer;
+        color: $clr-white;
+
+        &:hover {
+            color: $clr-orange;
+
+        }
+    }
+}
+
+.main-header {
+    li {
+        display: inline;
+    }
+}
+
+h1 {
+    font-size: $fs-500;
+    color: $clr-dark-blue;
+}
+
+h2 {
+    font-size: $fs-400;
+    color: $clr-orange;
+
+    &.index {
+        color: $clr-grayish-blue;
+    }
+}
+
+.top-new {
+    .new-title {
+        color: $clr-dark-blue;
+
+        &:hover{
+            color: $clr-red;
+        }
+    }
+}
