@@ -1,6 +1,7 @@
 @import 'cssReset';
 @import 'variables';
 @import 'nav';
+@import 'mainSection';
 
 @font-face {
     font-family: 'Inter';
@@ -25,7 +26,7 @@ body {
     background-color: $clr-white;
 
     &>* {
-        margin-bottom: $size-300;
+        margin-bottom: $size-400;
 
         &:last-child {
             margin-bottom: 0;
@@ -35,12 +36,13 @@ body {
 
 @media only screen and (max-width: 50rem) {
 body{
-    padding: $size-100;
+    padding: $size-200;
 }
 }
 
 button {
     cursor: pointer;
+    width: fit-content;
     border: none;
     box-shadow: 0 0 4px 1px $clr-dark-grayish-blue;
     background-color: $clr-red;
@@ -49,6 +51,7 @@ button {
     font-weight: $fw-bold;
     text-transform: uppercase;
     letter-spacing: $size-50;
+    white-space: nowrap;
 
     &:hover {
         background-color: $clr-dark-blue;
@@ -97,6 +100,11 @@ h2 {
     &.index {
         color: $clr-grayish-blue;
     }
+}
+
+h3{
+    font-size: $fs-200;
+    margin-bottom: 0.5rem;
 }
 
 .top-new {

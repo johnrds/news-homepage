@@ -35,7 +35,10 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 2;
+}
+body h1, body h2, body h3 {
+  line-height: 1;
 }
 
 /* A elements that don't have a class get default styles */
@@ -129,6 +132,60 @@ select {
     background-color: hsla(0deg, 0%, 0%, 0.35);
   }
 }
+.main-section {
+  display: grid;
+  grid-template-areas: "image image aside" "new-title new-text aside";
+  gap: 2rem;
+  grid-template-columns: 1.4fr 1.3fr 1.6fr;
+}
+.main-section .image {
+  grid-area: image;
+}
+.main-section .image .desktop {
+  display: block;
+}
+.main-section .image .mobile {
+  display: none;
+}
+.main-section .main-new-title {
+  grid-area: new-title;
+}
+.main-section .main-new-text {
+  grid-area: new-text;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main-section .aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-rows: subgrid;
+  align-items: center;
+}
+
+@media only screen and (max-width: 50rem) {
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "new-title" "new-text" "aside";
+  }
+  .main-section .image .desktop {
+    display: block;
+    margin-inline: auto;
+  }
+  .main-section .image .mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  .main-section .image .desktop {
+    display: none;
+  }
+  .main-section .image .mobile {
+    display: block;
+    margin-inline: auto;
+  }
+}
 @font-face {
   font-family: "Inter";
   src: url(./../assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("ttf");
@@ -150,7 +207,7 @@ body {
   background-color: hsl(210deg, 100%, 98%);
 }
 body > * {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 body > *:last-child {
   margin-bottom: 0;
@@ -158,11 +215,13 @@ body > *:last-child {
 
 @media only screen and (max-width: 50rem) {
   body {
-    padding: 0.75rem;
+    padding: 1.25rem;
   }
 }
 button {
   cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
   border: none;
   box-shadow: 0 0 4px 1px hsl(236deg, 13%, 42%);
   background-color: hsl(5deg, 85%, 63%);
@@ -171,6 +230,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
+  white-space: nowrap;
 }
 button:hover {
   background-color: hsl(240deg, 100%, 5%);
@@ -210,6 +270,11 @@ h2 {
 }
 h2.index {
   color: hsl(240deg, 6%, 80%);
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
 .top-new .new-title {
