@@ -18,11 +18,11 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./assets/images/live-screenshot.png)
 
 ## Links
 
-- [Solution](#)
+- [Solution](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-J2nkekrATj)
 - [Live Site](https://johnrds.github.io/news-homepage/)
 - [Challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
 
