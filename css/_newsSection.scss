@@ -1,0 +1,33 @@
+.top-news {
+    display: grid;
+    justify-items: start;
+    gap: 2rem;
+    line-height: 1.5;
+
+    .card {
+        display: grid;
+        grid-template-areas:
+            "image index"
+            "image title"
+            "image text";
+        column-gap: 1rem;
+        align-items: center;
+
+        img {
+            grid-area: image;
+            height: 100%;
+        }
+
+        h2 {
+            grid-area: index;
+        }
+
+        h3 {
+            grid-area: title;
+        }
+
+        p {
+            grid-area: text;
+        }
+    }
+}

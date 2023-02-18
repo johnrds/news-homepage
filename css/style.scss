@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'nav';
 @import 'mainSection';
+@import 'newsSection';
 
 @font-face {
     font-family: 'Inter';
@@ -26,11 +27,7 @@ body {
     background-color: $clr-white;
 
     &>* {
-        margin-bottom: $size-400;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        margin-bottom: $size-400;   
     }
 }
 
@@ -114,5 +111,14 @@ h3{
         &:hover {
             color: $clr-red;
         }
+    }
+}
+
+footer{
+    margin-bottom: 0;
+    text-align: center;
+
+    a{
+        color: $clr-red;
     }
 }
