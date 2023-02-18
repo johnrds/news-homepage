@@ -19,6 +19,8 @@ a {
 }
 
 body {
+    max-width: 1380px;
+    margin-inline: auto;
     padding: $size-500;
     font-family: 'Inter', Tahoma, sans-serif;
     font-size: $fs-100;
