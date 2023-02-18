@@ -1,5 +1,6 @@
 @import 'cssReset';
 @import 'variables';
+@import 'nav';
 
 @font-face {
     font-family: 'Inter';
@@ -9,6 +10,7 @@
 a {
     color: $clr-dark-grayish-blue;
     text-decoration: none;
+
     &:hover {
         color: $clr-red;
     }
@@ -21,6 +23,20 @@ body {
     font-weight: $fw-standard;
     color: $clr-dark-grayish-blue;
     background-color: $clr-white;
+
+    &>* {
+        margin-bottom: $size-300;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 50rem) {
+body{
+    padding: $size-100;
+}
 }
 
 button {
@@ -87,7 +103,7 @@ h2 {
     .new-title {
         color: $clr-dark-blue;
 
-        &:hover{
+        &:hover {
             color: $clr-red;
         }
     }

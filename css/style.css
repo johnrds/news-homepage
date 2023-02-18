@@ -23,6 +23,7 @@ dd {
 ul[role=list],
 ol[role=list] {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -48,6 +49,8 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -72,6 +75,60 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.nav-wrapper li {
+  margin-inline: 0.75rem;
+}
+.nav-wrapper .menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 50rem) {
+  .nav-wrapper .menu-icon {
+    display: block;
+  }
+  .nav-wrapper .nav-links {
+    box-shadow: 0 0 5px 1px hsl(236deg, 13%, 42%);
+    z-index: 1;
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    background-color: hsl(210deg, 100%, 98%);
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.2s ease-in-out;
+  }
+  .nav-wrapper .nav-links.mobile-visible {
+    width: 200px;
+    padding: 1.25rem;
+  }
+  .nav-wrapper .nav-links img {
+    margin-left: 125px;
+  }
+  .nav-wrapper .nav-links ul {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-wrapper .menu-icon.open {
+    display: block;
+    cursor: pointer;
+  }
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hsla(0deg, 0%, 0%, 0.35);
+  }
+}
 @font-face {
   font-family: "Inter";
   src: url(./../assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("ttf");
@@ -92,7 +149,18 @@ body {
   color: hsl(236deg, 13%, 42%);
   background-color: hsl(210deg, 100%, 98%);
 }
+body > * {
+  margin-bottom: 2rem;
+}
+body > *:last-child {
+  margin-bottom: 0;
+}
 
+@media only screen and (max-width: 50rem) {
+  body {
+    padding: 0.75rem;
+  }
+}
 button {
   cursor: pointer;
   border: none;
