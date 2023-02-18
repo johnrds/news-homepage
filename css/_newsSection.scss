@@ -30,5 +30,19 @@
         p {
             grid-area: text;
         }
+
+        &:hover{
+            box-shadow: 0 0 5px 1px $clr-transparent-orange;
+            transform: scale(1.01);
+            transition: all 0.02s ease;
+
+            h3{
+                color: $clr-red;
+            }
+
+            p{
+                color: $clr-dark-grayish-blue;
+            }
+        }
     }
 }

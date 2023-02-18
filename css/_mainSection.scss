@@ -35,6 +35,17 @@
         display: grid;
         grid-template-rows: 0fr repeat(3, 1fr);
         align-items: center;
+
+
+        a:hover,
+        a:focus-visible{
+            p{
+                color: $clr-dark-grayish-blue;
+            }
+            h3{
+                color: $clr-orange;
+            }
+        }
     }
 
 
