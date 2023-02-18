@@ -1,5 +1,6 @@
 .top-news {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: start;
     gap: 2rem;
     line-height: 1.5;
