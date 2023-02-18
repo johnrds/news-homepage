@@ -5,7 +5,7 @@
         "image image aside"
         "new-title new-text aside";
     gap: 2rem;
-    grid-template-columns: 1.4fr 1.3fr 1.6fr;
+    grid-template-columns: 1.4fr 1.3fr 1.5fr;
 
     .image {
         grid-area: image;
@@ -33,14 +33,14 @@
     .aside {
         grid-area: aside;
         display: grid;
-        grid-template-rows: subgrid;
+        grid-template-rows: 0fr repeat(3, 1fr);
         align-items: center;
     }
 
 
 }
 
-@media only screen and (max-width: 50rem) {
+@media only screen and (max-width: 55rem) {
     .main-section {
 
         grid-template-columns: 1fr;

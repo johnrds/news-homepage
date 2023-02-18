@@ -12,6 +12,10 @@
     }
 }
 
+.noScroll{
+    overflow: hidden
+}
+
 @media only screen and (max-width: 50rem) {
     .nav-wrapper {
         .menu-icon {

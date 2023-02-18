@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: start;
-    gap: 2rem;
+    gap: 2.5rem;
     line-height: 1.5;
 
     .card {
@@ -16,7 +16,7 @@
 
         img {
             grid-area: image;
-            height: 100%;
+            width: 120px;
         }
 
         h2 {

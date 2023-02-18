@@ -90,6 +90,10 @@ select {
   display: none;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 50rem) {
   .nav-wrapper .menu-icon {
     display: block;
@@ -136,7 +140,7 @@ select {
   display: grid;
   grid-template-areas: "image image aside" "new-title new-text aside";
   gap: 2rem;
-  grid-template-columns: 1.4fr 1.3fr 1.6fr;
+  grid-template-columns: 1.4fr 1.3fr 1.5fr;
 }
 .main-section .image {
   grid-area: image;
@@ -160,11 +164,11 @@ select {
 .main-section .aside {
   grid-area: aside;
   display: grid;
-  grid-template-rows: subgrid;
+  grid-template-rows: 0fr repeat(3, 1fr);
   align-items: center;
 }
 
-@media only screen and (max-width: 50rem) {
+@media only screen and (max-width: 55rem) {
   .main-section {
     grid-template-columns: 1fr;
     grid-template-areas: "image" "new-title" "new-text" "aside";
@@ -190,7 +194,7 @@ select {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: start;
-  gap: 2rem;
+  gap: 2.5rem;
   line-height: 1.5;
 }
 .top-news .card {
@@ -202,7 +206,7 @@ select {
 }
 .top-news .card img {
   grid-area: image;
-  height: 100%;
+  width: 120px;
 }
 .top-news .card h2 {
   grid-area: index;
@@ -310,6 +314,7 @@ h3 {
 }
 
 footer {
+  margin-top: 2rem;
   margin-bottom: 0;
   text-align: center;
 }

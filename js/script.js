@@ -8,12 +8,14 @@ openBtn.addEventListener('click', (e) => {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     body.appendChild(overlay);
+    body.classList.toggle('noScroll');
     overlay.addEventListener('click', hideNavbar);
 })
 
 function hideNavbar(){
     body.removeChild(document.querySelector('.overlay'));
     navLinks.classList.toggle('mobile-visible');
+    body.classList.toggle('noScroll');
 }
 
 closeBtn.addEventListener('click', hideNavbar)
